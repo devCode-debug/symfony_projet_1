@@ -1,0 +1,26 @@
+{{ form_start(form, { attr: { class: 'space-y-6' } }) }}
+
+<div>
+    {{ form_label(form.nom) }}
+    {{ form_widget(form.nom) }}
+    <div class="text-red-600 text-sm mt-1">{{ form_errors(form.nom) }}</div>
+</div>
+
+<div>
+    {{ form_label(form.prenom) }}
+    {{ form_widget(form.prenom) }}
+    <div class="text-red-600 text-sm mt-1">{{ form_errors(form.prenom) }}</div>
+</div>
+
+<div>
+    {{ form_label(form.telephone) }}
+    {{ form_widget(form.telephone) }}
+    <div class="text-red-600 text-sm mt-1">{{ form_errors(form.telephone) }}</div>
+</div>
+
+<button type="submit"
+        class="mt-4 inline-block px-6 py-2 bg-purple-700 hover:bg-purple-800 text-white font-medium rounded-xl shadow transition">
+    {{ button_label|default('Enregistrer') }}
+</button>
+
+{{ form_end(form) }}
